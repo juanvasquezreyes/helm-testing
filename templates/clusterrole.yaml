@@ -1,0 +1,14 @@
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: {{ template "test.fullname" . }}-clusterrole
+  labels:
+    {{- include "test.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": pre-install,pre-upgrade
+    "helm.sh/hook-weight": "0"
+    "helm.sh/hook-delete-policy": before-hook-creation 
+rules:
+  - apiGroups:      ['*']
+    resources:      ['*']
+    verbs:          ['get','list']

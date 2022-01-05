@@ -78,3 +78,9 @@ tolerations: []
 
 affinity: {}
 
+postgresql:
+  enabled: true
+  nameOverride: postgresql
+  postgresqlDatabase: test
+  postgresqlUsername: test
+  postgresqlPassword: test
