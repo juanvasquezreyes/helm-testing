@@ -4,8 +4,6 @@ metadata:
   name: {{ include "test.fullname" . }}-custom
 data: 
 # 1) modify the existing configmap to pull the command from values.yaml
-  test.sh: |
-    #!/bin/bash
-    
-    echo "modify this line to pull the command from values.yaml"
+  test: |
+    modify this line to pull the command from values.yaml
     
