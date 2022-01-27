@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: {{ include "test.fullname" . }}-custom
 data: 
-  test: |
-    abcd
+  test.sh: |
+    echo "abcd"
     
