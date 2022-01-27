@@ -36,7 +36,7 @@ spec:
           command:
             - "/bin/sh"
             - "-c"
-            - "/tmp/scripts/script.py"
+            - "/tmp/scripts/script.sh"
           ports:
             - name: http
               containerPort: 80
